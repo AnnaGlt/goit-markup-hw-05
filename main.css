@@ -1,0 +1,225 @@
+/* основний колір текста #757575 */
+/* вторичний колір текста #212121 */
+/* білий #FFFFFF */
+/* герой і футер background: #2F303A */
+/* основний background: #E5E5E5 */
+/* команда background: #F5F4FA */
+/* хедер background: #FFFFFF*/
+
+:root {
+    --primery-text-color: #757575;
+    --title-text-coloc: #212121;
+    --accent-color: #2196F3;
+    --primery-white-coloc: #FFFFFF;
+    --titel-background-color: #2F303A;
+    --secondary-background-color: #F5F4FA;
+    --black: #000000;
+    --main-font: Roboto;
+    --secondary-font: Raleway;
+    --social-icon-color: #AFB1B8;
+}
+
+
+body {
+    background-color: var(--primery-white-coloc);
+    color: var(--primery-text-color);
+    font-family: var(--main-font), sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    }
+
+/* хедер*/
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+        
+.header .logo {
+    margin-right: 93px;
+    color: var(--accent-color);
+    font-family: var(--secondary-font), sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+.header .logo-title {
+    color: var(--black);
+}
+
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: var(--primery-white-coloc);
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-item:not(:last-child) {
+margin-right: 50px;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--title-text-coloc);
+    letter-spacing: 0.02em;
+}
+
+.header-nav .link:hover,
+.header-nav .link:focus {
+    color: var(--accent-color);
+}
+
+.header-nav .link.current {
+    color: var(--accent-color);
+    display: block;
+}
+
+.header-contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.header-contact {
+    color: var(--primery-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+
+.header-contact:hover,
+.header-contact:focus {
+    color: var(--accent-color);
+}
+
+.mail {
+    margin-right: 50px;
+}
+
+.ico {
+    margin-right: 10px;
+    object-position: center;
+    fill: currentColor;
+}
+
+.ico :hover,
+.ico :focus {
+    color: var(--accent-color);
+}
+
+/*футер*/
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: var(--primery-white-coloc);
+    background-color: var(--titel-background-color);
+    font-style: normal;
+}
+
+.footer .logo {
+    display: block;
+    margin-bottom: 20px;
+    font-family: var(--secondary-font), sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--accent-color);
+}
+
+.footer .logo-title {
+    color: var(--primery-white-coloc);
+}
+
+address {
+    font-style: normal;
+}
+.map {
+    margin-bottom: 9px;
+}
+
+.contacts .footer-contacts{
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.mail-footer {
+    margin-bottom: 9px;
+}
+
+.ico-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    }
+
+.social-link-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--primery-white-coloc);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+        
+.social-link-footer:hover,
+.social-link-footer:focus {
+    background-color: var(--accent-color);
+    fill: var(--primery-white-coloc);
+}
+
+.footer-position{
+    display: flex;
+}
+
+.footer-main {
+    margin-right: 70px;
+}  
+
+.footer-add {
+    padding-top: 12px;
+}
+
+.add {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
