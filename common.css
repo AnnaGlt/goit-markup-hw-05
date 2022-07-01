@@ -34,6 +34,8 @@
     text-transform: uppercase;
 }
 
+
+
 /* кнопки */
 
 .button {
@@ -131,6 +133,7 @@
     letter-spacing: 0.03em;
 }
 
+
 /* about*/
 
 .section-about {
@@ -154,6 +157,30 @@
 
 .about:not(:last-child) {
     margin-right: 30px;
+}
+
+.about {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    margin-bottom: 0;
+}
+
+.text-about {
+    position: absolute;
+    padding: 35px;
+    width: 100%;
+    bottom: 0;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 0.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primery-white-coloc);
+    background: rgba(47, 48, 58, 0.8);
 }
 
 /*команда*/
@@ -322,3 +349,59 @@
     line-height: 1.8;
     letter-spacing: 0.03em;
 }
+
+.aside {
+    position: relative;
+    display: block; 
+}
+
+.desc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+    font-family: var(--main-font);
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+    color: var(--primery-white-coloc);
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 700ms, opasiti linear;
+}
+
+.dropdown:hover .desc {
+    content: '';
+    opacity: 1;
+    display: inline-block;
+}
+
+/* модальне вікно*/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    width: 528;
+    height: 581;
+    background-color: var(--primery-white-coloc);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+   
