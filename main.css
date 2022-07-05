@@ -17,6 +17,7 @@
     --main-font: Roboto;
     --secondary-font: Raleway;
     --social-icon-color: #AFB1B8;
+    --anim-slow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -56,6 +57,7 @@ img{
 .header-container {
     display: flex;
     align-items: center;
+    padding: 0;
 }
         
 .header .logo {
@@ -66,6 +68,7 @@ img{
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    padding: 0;
 }
 
 .header .logo-title {
@@ -73,8 +76,6 @@ img{
 }
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
     background-color: var(--primery-white-coloc);
     border-bottom: 1px solid #ECECEC;
 }
@@ -93,7 +94,11 @@ margin-right: 50px;
     font-weight: 500;
     font-size: 14px;
     color: var(--title-text-coloc);
+    line-height: 1.14;
     letter-spacing: 0.02em;
+
+    padding: 32px 0 31px 0;
+    transition: color var(--anim-slow);
 }
 
 .header-nav .link:hover,
@@ -101,9 +106,25 @@ margin-right: 50px;
     color: var(--accent-color);
 }
 
-.header-nav .link.current {
+.link.current {
     color: var(--accent-color);
     display: block;
+    position: relative;
+}
+
+.link.current::after {
+    content: '';
+
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    position: absolute;
 }
 
 .header-contacts {
@@ -116,6 +137,8 @@ margin-right: 50px;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
+
+    transition: color var(--anim-slow);
 }
 
 .header-contact:hover,
@@ -131,6 +154,8 @@ margin-right: 50px;
     margin-right: 10px;
     object-position: center;
     fill: currentColor;
+
+    transition: color var(--anim-slow);
 }
 
 .ico :hover,
@@ -151,6 +176,7 @@ margin-right: 50px;
 .footer .logo {
     display: block;
     margin-bottom: 20px;
+    padding: 0;
     font-family: var(--secondary-font), sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -174,6 +200,7 @@ address {
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.71;
     letter-spacing: 0.03em;
+    padding: 0;
 }
 
 .mail-footer {
@@ -197,6 +224,8 @@ address {
     height: 44px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color var(--anim-slow);
 }
         
 .social-link-footer:hover,

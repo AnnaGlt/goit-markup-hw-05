@@ -50,6 +50,8 @@
     border: 1px solid transparent;
     padding: 10px 32px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: background-color var(--anim-slow);
 }
 
 .button:hover,
@@ -71,6 +73,8 @@
     border-radius: 4px;
     border: 1px solid transparent;
     padding: 6px 22px;
+
+    transition: background-color var(--anim-slow);
 }
 
 .button-secondary:hover,
@@ -243,6 +247,8 @@
     height: 44px;
     border-radius: 50%;
     fill: var(--social-icon-color);
+
+    transition: background-color var(--anim-slow);
 }
 
 .social-link:hover,
@@ -276,6 +282,8 @@
     fill: rgba(175, 177, 184, 1);
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+
+    transition: fill var(--anim-slow);
 }
 
 .clients-list:hover,
@@ -352,11 +360,14 @@
 
 .aside {
     position: relative;
-    display: block; 
+    display: block;
+    overflow: hidden;
 }
 
 .desc {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     padding: 63px 24px;
@@ -366,17 +377,16 @@
     letter-spacing: 0.03em;
     line-height: 1.5;
     color: var(--primery-white-coloc);
-    opacity: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 700ms, opasiti linear;
+
+    transition: var(--anim-slow), opasiti linear;
+    transform: translatey(+100%);
+
+    overflow: hidden;
 }
 
 .dropdown:hover .desc {
     content: '';
-    opacity: 1;
-    display: inline-block;
+    transform: translatey(0);
 }
 
 /* модальне вікно*/
@@ -387,18 +397,52 @@
     left: 0;
     width: 100%;
     height: 100%;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .modal {
-    width: 528;
-    height: 581;
+    min-width: 528px;
+    min-height: 581px;
     background-color: var(--primery-white-coloc);
 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 4px;
 
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(-8px, 8px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--primery-white-coloc);
+    cursor: pointer;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 

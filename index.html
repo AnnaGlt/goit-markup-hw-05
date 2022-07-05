@@ -74,7 +74,9 @@
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <div class="modal">
-            <button class="button" type="button">Заказать услугу</button>
+            <button data-modal-open class="button" type="button">
+              Заказать услугу
+            </button>
           </div>
         </div>
       </section>
@@ -424,14 +426,16 @@
     </footer>
 
     <!--модальне вікно-->
-    <div class="backdrop">
+    <div data-modal class="backdrop is-hidden">
       <div class="modal">
-        <button aria-label="выйти" class="exit">
+        <button data-modal-close aria-label="выйти" class="exit" tipe="button">
           <svg width="11" height="11" class="">
-            <use href="./images/Vector.svg"></use>
+            <use href="./symbol-defs.svg#icon-exit"></use>
           </svg>
         </button>
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
