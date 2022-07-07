@@ -28,6 +28,10 @@ body {
     font-size: 14px;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .container {
     width: 1200px;
     padding-left: 15px;
@@ -249,6 +253,10 @@ address {
 .add {
     margin-bottom: 20px;
     text-transform: uppercase;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
 }
 
 
